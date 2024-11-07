@@ -89,7 +89,7 @@ node4_full_30_no = Node(
 # Level 5
 # For node4_full_10_no path
 node5_full_10_no_yes = Node(
-    question="Are you Hungry?",  # Question 4
+    question="Are you Hungry?",  # Question 5
     options=["Yes", "No"]
 )
 
@@ -100,12 +100,11 @@ node5_full_30_yes_yes = wait_node  # Recommendation: Wait
 node5_full_30_yes_no = leave_node  # Recommendation: Leave
 
 # For node4_full_30_no path
+node5_full_30_no_yes = wait_node  # Recommendation: Wait
 node5_full_30_no_no = Node(
     question="Do you have a Reservation?",  # Question 5
     options=["Yes", "No"]
 )
-
-node5_full_30_no_yes = wait_node  # Recommendation: Wait
 
 # Level 6
 # For node5_full_10_no_yes path
@@ -115,8 +114,6 @@ node6_full_10_no_yes_no = wait_node  # Recommendation: Wait
 # For node5_full_30_no_no path
 node6_full_30_no_no_yes = wait_node  # Recommendation: Wait
 node6_full_30_no_no_no = leave_node  # Recommendation: Leave
-
-
 
 
 # Level 5
@@ -136,8 +133,6 @@ node5_full_30_yes_no = Node(
 # For node4_full_30_no 
 node5_full_30_no_yes = wait_node
 node5_full_30_no_no = leave_node
-
-
 
 
 
