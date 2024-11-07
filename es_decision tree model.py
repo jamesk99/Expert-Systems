@@ -147,15 +147,15 @@ root.children = {
 
 # Level 2
 node2_full.children = {
-    "0": node3_full_0,  # Recommendation: Leave
+    "0": node3_full_0,  # Recommendation: Wait
     "10": node3_full_10,
     "30": node3_full_30,
-    "60": node3_full_60 # Recommendation: Wait
+    "60": node3_full_60 # Recommendation: Leave
 }
 
 # Level 3
 node3_full_10.children = {
-    "Yes": wait_node,
+    "Yes": node4_full_10_yes, # Recommendation: Wait
     "No": node4_full_10_no
 }
 
@@ -167,28 +167,28 @@ node3_full_30.children = {
 # Level 4
 node4_full_10_no.children = {
     "Yes": node5_full_10_no_yes,
-    "No": node5_full_10_no_no
+    "No": node5_full_10_no_no # Recommendation: Wait
 }
 
 node4_full_30_yes.children = {
-    "Yes": wait_node,
-    "No": leave_node
+    "Yes": node5_full_30_yes_yes, # Recommendation: Wait
+    "No": node5_full_30_yes_no # Recommendation: Leave
 }
 
 node4_full_30_no.children = {
-    "Yes": node5_full_30_no_yes,
+    "Yes": node5_full_30_no_yes, # Recommendation: Wait
     "No": node5_full_30_no_no
 }
 
 # Level 5
 node5_full_10_no_yes.children = {
-    "Yes": leave_node,
-    "No": wait_node
+    "Yes": node6_full_10_no_yes_yes, # Recommendation: Leave
+    "No": node6_full_10_no_yes_no # Recommendation: Wait
 }
 
 node5_full_30_no_no.children = {
-    "Yes": wait_node,
-    "No": leave_node
+    "Yes": node6_full_30_no_no_yes, # Recommendation: Wait
+    "No": node6_full_30_no_no_no # Recommendation: Leave
 }
 
 # Level 6
@@ -197,7 +197,6 @@ node6_full_10_no_yes_no.children = {}
 
 node6_full_30_no_no_yes.children = {}
 node6_full_30_no_no_no.children = {}
-
 
 
 # GUI Application Class
