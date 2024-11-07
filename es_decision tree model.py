@@ -116,25 +116,6 @@ node6_full_30_no_no_yes = wait_node  # Recommendation: Wait
 node6_full_30_no_no_no = leave_node  # Recommendation: Leave
 
 
-# Level 5
-# For node4_full_30_yes
-node5_full_30_yes_yes = Node(
-    question=None,
-    options=[],
-    result="Recommendation: Wait"
-)
-
-node5_full_30_yes_no = Node(
-    question=None,
-    options=[],
-    result="Recommendation: Leave"
-)
-
-# For node4_full_30_no 
-node5_full_30_no_yes = wait_node
-node5_full_30_no_no = leave_node
-
-
 
 # Assign children to nodes
 
