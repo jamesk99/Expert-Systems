@@ -1,6 +1,3 @@
-import tkinter as tk
-from tkinter import messagebox
-
 # Define the Node class for the decision tree
 class Node:
     def __init__(self, question, options, children=None, result=None):
@@ -178,5 +175,4 @@ node6_full_10_no_yes_no.children = {}
 
 node6_full_30_no_no_yes.children = {}
 node6_full_30_no_no_no.children = {}
-
 
